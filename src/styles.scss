@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+:root {
+    --c-bg: #202020;
+    --c-primary: #00a6ff; 
+    --c-secondary: #c30441; 
+}
