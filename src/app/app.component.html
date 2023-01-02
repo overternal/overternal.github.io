@@ -1,7 +1,28 @@
 <div class="wrap">
   <div class="content">
-    <app-feed-block [bgUrl]="'./assets/pozerybg.jpg'">
-      
+    <app-feed-block [appGridArea]="'youtube-main'">
+      <h3>Soon...</h3>
+    </app-feed-block>
+    <app-feed-block [bgUrl]="'./assets/pozerybg.jpg'" [appGridArea]="'pozery'">
+      <div class="pozery-block">
+        <div class="top">
+          <h3 class="title">
+            Позеры на выход
+          </h3>
+        </div>
+        <div class="middle">
+          <div class="desc">
+            Heavy pop punk with alternative vibes
+          </div>
+        </div>
+        <div class="bottom">
+          <a class="mail-link" href="mailto:pozery@overternal.com">pozery@overternal.com</a>
+          <button class="btn-primary hover">MORE >>></button>
+        </div>
+      </div>
+    </app-feed-block>
+    <app-feed-block [bgUrl]="'./assets/2.jpg'" [appGridArea]="'mentalshape'">
+      <h3>Soon...</h3>
     </app-feed-block>
   </div>
 </div>

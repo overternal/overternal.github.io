@@ -9,10 +9,70 @@
 
 .content {
     min-height: 100vh;
-    width: 1080px;
-    padding: 20px;
+    width: var(--w-main);
+    padding: var(--p-main);
+    display: grid;
+    grid-template-areas:
+        "youtube-main youtube-main"
+        "pozery mentalshape";
+    gap: calc(var(--p-main));
 }
 
 .pozery-bg {
     background: url('./../assets/pozerybg.jpg');
+}
+
+.row {
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;
+    column-gap: var(--p-main);
+    margin-bottom: var(--p-main);
+
+    >* {
+        width: 100%;
+    }
+}
+
+.btn-primary {
+    border: 0;
+    padding: calc(var(--p-main) / 2) var(--p-main);
+    color: white;
+    background: var(--gradient-double);
+}
+
+.mail-link {
+    color: white;
+    opacity: 0.6;
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+// content
+
+.pozery-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .title {
+        margin-bottom: var(--p-main);
+    }
+
+    .middle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }

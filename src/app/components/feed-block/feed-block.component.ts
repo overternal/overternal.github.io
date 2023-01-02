@@ -14,35 +14,36 @@ import { Component, Input } from '@angular/core';
   `,
   styles: [`
     .block-wrap {
-      min-height: 40vh;
+      min-height: 50vh;
       display: grid;
       position: relative;
     }
 
     .block-bg {
       height: 100%;
-      padding: 5px;
-      background: linear-gradient(45deg, var(--c-primary), var(--c-secondary), var(--c-primary));
-      animation: 2s infinite linear bg-rotate;
-      box-shadow: 0px 0px 30px -3px black;
+      padding: 3px;
+      background: var(--gradient-triple);
+      animation: 5s infinite linear bg-rotate;
+      box-shadow: 0px 0px 30px -8px black;
     }
 
     .block-content {
       height: 100%;
-      padding: 20px;
+      padding: var(--p-main);
       background-color: var(--c-bg);
     }
 
     .bg {
+      pointer-events: none;
       position: absolute;
       height: 100%;
       width: 100%;
       background-position: center;
       background-size: cover;
       z-index: 1;
-      height: calc(100% - 10px);
-      width: calc(100% - 10px);
-      opacity: 0.2;
+      height: calc(100% - (var(--p-main) / 2));
+      width: calc(100% - (var(--p-main) / 2));
+      opacity: 0.1;
     }
 
     @keyframes bg-rotate {
@@ -51,11 +52,11 @@ import { Component, Input } from '@angular/core';
       }
 
       50% {
-        background-position: 540px;
+        background-position: calc(var(--w-main) / 2 - (var(--p-main) * 2));
       }
 
       100% {
-        background-position: 1080px;
+        background-position: calc(var(--w-main) - (var(--p-main) * 2));
       }
 }
   `]
