@@ -1,2 +1,1 @@
-const footerText = document.getElementsByClassName('footer-text')[0];
-footerText.innerText += new Date().getFullYear();
+document.getElementsByClassName("footer-text")[0].innerText+=(new Date).getFullYear();
