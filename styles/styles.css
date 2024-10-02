@@ -75,6 +75,7 @@ h2 {
 
 main {
     height: 100%;
+    min-height: 90dvh;
 }
 
 nav.top-nav {
@@ -136,7 +137,7 @@ img.logo {
         padding-top: 0;
 
         .artist-logo {
-            height: 84px;
+            height: calc(var(--s-xl) * 2);
             border-radius: 50%;
         }
 
@@ -175,7 +176,7 @@ img.logo {
 
 
 footer {
-    padding: 16px;
+    padding: var(--s-md);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -187,7 +188,7 @@ footer {
 
 .email {
     color: var(--color-text);
-    opacity: 0.8;
+    opacity: var(--hover-opacity);
     text-decoration: underline;
 }
 
